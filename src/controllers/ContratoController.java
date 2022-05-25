@@ -89,20 +89,20 @@ public class ContratoController implements Initializable {
 			img.setAlignment(com.itextpdf.text.Image.ALIGN_CENTER);
 			doc.add(img);
 			doc.add(new Paragraph("En este contrato se especifican los detalles de los"
-								+ "servicios medicos solicitados en la aplicación, de tal "
-								+ "manera que se haga mas fácil el hecho de poder interpretar " 
-								+ "la información a través de un consolidado que puede ser impreso en medios fisicos." 
-								+ "\n\n DATOS DEL SERVICIO MÉDICO"
+								+ "servicios medicos solicitados en la aplicaciï¿½n, de tal "
+								+ "manera que se haga mas fï¿½cil el hecho de poder interpretar " 
+								+ "la informaciï¿½n a travï¿½s de un consolidado que puede ser impreso en medios fisicos." 
+								+ "\n\n DATOS DEL SERVICIO Mï¿½DICO"
 								+ "\n Doctor: " + txt_locataire.getText() + ""
-								+ "\n El servicio se prestará desde el: " + txt_dateDebut.getText()
+								+ "\n El servicio se prestarï¿½ desde el: " + txt_dateDebut.getText()
 								+ " hasta el: " + txt_dateFin.getText() + ""
-								+ "\n El servicio se prestará en: " + txt_type.getText() + ""
+								+ "\n El servicio se prestarï¿½ en: " + txt_type.getText() + ""
 								+ "\n Denominada: " + txt_adr.getText() + ""
 								+ "\n Ubicada en: " + txt_region.getText() + ""
 								+ "\n Generado automaticamente por HealthCareApp el: " + formater.format(date) + ""
-								+ "\n\n Cabe destacar que la información aquí presentada es de caracter educativo y por " 
-								+ " lo tanto este documento no representa ningún tipo de validez legal."
-								+ "\n\n Firmado Electrónicament por,", FontFactory.getFont(FontFactory.TIMES_ROMAN, 14, Font.NORMAL, BaseColor.BLACK)));
+								+ "\n\n Cabe destacar que la informaciï¿½n aquï¿½ presentada es de caracter educativo y por " 
+								+ " lo tanto este documento no representa ningï¿½n tipo de validez legal."
+								+ "\n\n Firmado Electrï¿½nicament por,", FontFactory.getFont(FontFactory.TIMES_ROMAN, 14, Font.NORMAL, BaseColor.BLACK)));
 			com.itextpdf.text.Image img1 = com.itextpdf.text.Image.getInstance("C:\\Users\\PROBOOK\\eclipse-workspace\\HealthCareApp-\\src\\images\\Firma.png");
 			img1.setAlignment(com.itextpdf.text.Image.ALIGN_CENTER);
 			doc.add(img1);

@@ -86,7 +86,7 @@ public class SignInController implements Initializable {
 		Message message = prepareMessage(session, myAccountEmail, recepient);
 		try {
 			Transport.send(message);
-			Alert alert = new Alert(AlertType.CONFIRMATION, "Se ha enviado un mail a su correo con la Contraseña", ButtonType.OK);
+			Alert alert = new Alert(AlertType.CONFIRMATION, "Se ha enviado un mail a su correo con la ContraseÃ±a", ButtonType.OK);
 			alert.showAndWait();
 		} 
 		catch (MessagingException e) {
@@ -108,8 +108,8 @@ public class SignInController implements Initializable {
 		catch (SQLException e) {
 			e.printStackTrace();
 		}
-		String text = "La Contraseña asociada a su cuenta en HealthCareApp es: " + pass + "";
-		String object = "Recuperación de Contraseña HealthCareApp";
+		String text = "La Contraseï¿½a asociada a su cuenta en HealthCareApp es: " + pass + "";
+		String object = "Recuperaciï¿½n de Contraseï¿½a HealthCareApp";
 		Message message = new MimeMessage(session);
 		try {
 			message.setFrom(new InternetAddress(myAccountEmail));

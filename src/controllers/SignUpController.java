@@ -1,7 +1,6 @@
 package controllers;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.net.URL;
 import java.sql.Connection;
@@ -69,7 +68,8 @@ public class SignUpController implements Initializable {
 		String email = txt_email.getText();
 		String cin = txt_CIN.getText();
 		File image = new File (lab_url.getText());
-		String sql = "insert into admin (userName, password, photo, adrMail, CIN) values (?, ?, ?, ?)";
+		String sql = "insert into admin (userName, password, adrMail, CIN) values (?, ?, ?, ?)";
+		//String sql ="insert into admin(userName, password, photo, adrMail, CIN) values(?, ?, ?, ?, ?)";
 		if (!userName.equals("") && !password.equals("") && !email.equals("") && !cin.equals("")) {
 			try {
 				st = cnx.prepareStatement(sql);
@@ -77,21 +77,18 @@ public class SignUpController implements Initializable {
 				st.setString(2, password);
 				st.setString(3, email);
 				st.setString(4, cin);
-				fs = new FileInputStream(image);
-				st.setBinaryStream(5, fs, image.length());
+				//fs = new FileInputStream(image);
+				//st.setBinaryStream(5, fs, image.length());
 				st.executeUpdate();
 				txt_userName.setText("");
 				txt_password.setText("");
 				txt_email.setText("");
 				txt_CIN.setText("");
 				
-				Alert alert = new Alert(AlertType.CONFIRMATION, "Usuario Agregado con Éxito", ButtonType.OK);
+				Alert alert = new Alert(AlertType.CONFIRMATION, "Usuario Agregado con ï¿½xito", ButtonType.OK);
 				alert.showAndWait();
 			} 
 			catch (SQLException e) {
-				e.printStackTrace();
-			} 
-			catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
 		}
@@ -103,14 +100,14 @@ public class SignUpController implements Initializable {
 	
 	@FXML
 	void addAdmin() {
-		Alert alert = new Alert(AlertType.CONFIRMATION, "Usuario Agregado con Éxito", ButtonType.OK);
+		Alert alert = new Alert(AlertType.CONFIRMATION, "Usuario Agregado con Ã‰xito", ButtonType.OK);
 		alert.showAndWait();
 	}
 	
-	private FileInputStream fs;
+	//private FileInputStream fs;
 
 	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
+	public void initialize(URL location, ResourceBundle resources) {	
 		cnx = ConnexionMysql.connexionDB();
 	}
 }
