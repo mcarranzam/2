@@ -1,7 +1,7 @@
-package UNCode.DataStructures.queue;
+package DataStructures.queue;
 
-import UNCode.DataStructures.list.SinglyLinkedList;
-import UNCode.DataStructures.node.Node;
+import DataStructures.list.SinglyLinkedList;
+import DataStructures.node.Node;
 
 public class Queue<T> extends SinglyLinkedList {
     public Queue(){

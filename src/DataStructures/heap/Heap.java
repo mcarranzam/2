@@ -1,4 +1,4 @@
-package UNCode.DataStructures.heap;
+package DataStructures.heap;
 
 public class Heap {
     int maxSize,size;

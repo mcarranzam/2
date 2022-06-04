@@ -1,7 +1,7 @@
-package UNCode.DataStructures.list;
+package DataStructures.list;
 
-import UNCode.DataStructures.list.include.List;
-import UNCode.DataStructures.node.Node;
+import DataStructures.list.include.List;
+import DataStructures.node.Node;
 
 public class SinglyLinkedList<T> extends List {
     public SinglyLinkedList(){

@@ -1,6 +1,5 @@
-package UNCode.DataStructures.tree;
-
-import UNCode.DataStructures.node.BinaryNode;
+package DataStructures.tree;
+import DataStructures.node.BinaryNode;
 import java.nio.BufferUnderflowException;
 
 public class BinarySearchTree<T extends Comparable<?super T>> {

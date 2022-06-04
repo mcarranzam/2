@@ -1,7 +1,7 @@
-package UNCode.DataStructures.tree;
-import UNCode.DataStructures.list.SinglyLinkedList;
-import UNCode.DataStructures.node.AvlNode;
-import UNCode.DataStructures.queue.Queue;
+package DataStructures.tree;
+import DataStructures.list.SinglyLinkedList;
+import DataStructures.node.AvlNode;
+import DataStructures.queue.Queue;
 
 import java.nio.BufferUnderflowException;
 

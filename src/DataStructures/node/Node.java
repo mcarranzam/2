@@ -1,4 +1,4 @@
-package UNCode.DataStructures.node;
+package DataStructures.node;
 
 public class Node<T> {
     public T key;

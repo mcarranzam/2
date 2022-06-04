@@ -1,6 +1,6 @@
-package UNCode.DataStructures.list.include;
+package DataStructures.list.include;
 
-import UNCode.DataStructures.node.Node;
+import DataStructures.node.Node;
 
 public abstract class List<T>{
 

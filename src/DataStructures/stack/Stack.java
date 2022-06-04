@@ -1,7 +1,7 @@
-package UNCode.DataStructures.stack;
+package DataStructures.stack;
 
-import UNCode.DataStructures.list.SinglyLinkedList;
-import UNCode.DataStructures.node.Node;
+import DataStructures.list.SinglyLinkedList;
+import DataStructures.node.Node;
 
 public class Stack<T> extends SinglyLinkedList {
     public Stack(){
