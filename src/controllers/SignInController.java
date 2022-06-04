@@ -71,10 +71,20 @@ public class SignInController implements Initializable {
 
 	public void sendMail(String recepient) {
 		Properties properties = new Properties();
+		//properties.put("mail.smtp.auth", "true");
+		//properties.put("mail.smtp.starttls.enable", "true");
+		//properties.put("mail.smtp.host", "smtp.gmail.com");
+		//properties.put("mail.smtp.port", "587");
+		//final String myAccountEmail = "HealthCareAppED@gmail.com";
+		//final String password = "ArribaElSocialismo";
+		
+		properties.put("mail.smtp.host", "smtp.gmail.com");
+		properties.put("mail.smtp.port", "465");
 		properties.put("mail.smtp.auth", "true");
 		properties.put("mail.smtp.starttls.enable", "true");
-		properties.put("mail.smtp.host", "smtp.gmail.com");
-		properties.put("mail.smtp.port", "587");
+		properties.put("mail.smtp.starttls.required", "true");
+		properties.put("mail.smtp.ssl.protocols", "TLSv1.2");
+		properties.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
 		final String myAccountEmail = "HealthCareAppED@gmail.com";
 		final String password = "ArribaElSocialismo";
 
@@ -108,8 +118,8 @@ public class SignInController implements Initializable {
 		catch (SQLException e) {
 			e.printStackTrace();
 		}
-		String text = "La Contrase�a asociada a su cuenta en HealthCareApp es: " + pass + "";
-		String object = "Recuperaci�n de Contrase�a HealthCareApp";
+		String text = "La Contraseña asociada a su cuenta en HealthCareApp es: " + pass + "";
+		String object = "Recuperación de Contrase�a HealthCareApp";
 		Message message = new MimeMessage(session);
 		try {
 			message.setFrom(new InternetAddress(myAccountEmail));

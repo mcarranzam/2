@@ -1,6 +1,7 @@
 package controllers;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.net.URL;
 import java.sql.Connection;
@@ -90,7 +91,10 @@ public class SignUpController implements Initializable {
 			} 
 			catch (SQLException e) {
 				e.printStackTrace();
-			}
+			} 
+			/*catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}*/
 		}
 		else {
 			Alert alert = new Alert(AlertType.WARNING, "Error al Agregar Usuario", ButtonType.OK);
@@ -100,7 +104,7 @@ public class SignUpController implements Initializable {
 	
 	@FXML
 	void addAdmin() {
-		Alert alert = new Alert(AlertType.CONFIRMATION, "Usuario Agregado con Éxito", ButtonType.OK);
+		Alert alert = new Alert(AlertType.CONFIRMATION, "Usuario Agregado con xito", ButtonType.OK);
 		alert.showAndWait();
 	}
 	

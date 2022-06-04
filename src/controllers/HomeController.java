@@ -75,7 +75,7 @@ public class HomeController implements Initializable {
     @FXML
     void location(MouseEvent event) {
     	try {
-			fxml = FXMLLoader.load(getClass().getResource("/interfaces/Ubicación.fxml"));
+			fxml = FXMLLoader.load(getClass().getResource("/interfaces/UbicaciÃ³n.fxml"));
 			root.getChildren().removeAll();
 			root.getChildren().setAll(fxml);
 		} 
