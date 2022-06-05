@@ -11,7 +11,8 @@ public class Queue<T> extends SinglyLinkedList {
         this.tail.next = null;
     }
 
-    public void Enqueue(T key){this.PushBack(key);
+    public void Enqueue(T key) {
+    	this.PushBack(key);
     }
 
     public T Dequeue(){
